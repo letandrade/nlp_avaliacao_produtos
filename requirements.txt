@@ -1,0 +1,13 @@
+pandas>=1.3.0,<2.0.0
+seaborn>=0.11.0,<0.13.0
+matplotlib>=3.4.0,<4.0.0
+nltk>=3.6.0,<4.0.0
+scikit-learn>=1.0.0,<1.4.0
+wordcloud>=1.8.1,<2.0.0
+
+#Para o NLTK, é necessário baixar alguns recursos no código, como stopwords e wordnet:
+
+#import nltk
+#nltk.download('stopwords')
+#nltk.download('wordnet')
+#nltk.download('omw-1.4')
