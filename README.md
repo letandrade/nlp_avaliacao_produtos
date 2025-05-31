@@ -14,7 +14,13 @@ O projeto tem impacto direto em áreas como comércio eletrônico, suporte ao cl
 
 ## **2.0 Objetivos técnicos**
 
-Entregar planilhas em excel com as quantidade e representação percentual das avaliações positivas e negativas por tipo de produto e marca. Essa entrega será feita para as 3 abordagens de classificação, totalizando 6 planilhas de resulatdos. 
+Além da construção dos classificadores, este projeto contempla a entrega de planilhas em formato Excel contendo os resultados da análise de sentimentos. Para cada uma das três abordagens de classificação — contagem de palavras, vetorização com CountVectorizer e TF-IDF — serão geradas duas planilhas:
+
+Distribuição absoluta: quantidade de avaliações positivas e negativas, segmentadas por tipo de produto e marca.
+
+Distribuição percentual: representação em percentual dessas classificações nas mesmas segmentações.
+
+Ao todo, serão entregues 6 planilhas contendo uma visão consolidada dos resultados obtidos em cada abordagem, permitindo comparações detalhadas e facilitando a interpretação dos padrões de sentimento por produto e marca.
 
 A solução contempla três abordagens distintas para a classificação:
 
@@ -29,32 +35,21 @@ A solução contempla três abordagens distintas para a classificação:
 - **Python (Anaconda):** Pré-processamento, modelagem e avaliação.
 - **Pandas / seaborn / matplotlib/ Scikit-learn / nltk / re / wordcloud:** Bibliotecas para manipulação e NLP.
 - **Jupyter Notebook:** Ambiente de desenvolvimento.
+- **ChatGpt:** IA generativa para criar o target das avaliações. Essa classificação foi importante para o treinamento dos modelos supervisionados .
   
 ## **4.0 Desenvolvimento**
 
 O desenvolvimento detalhado está disponível no notebook Avaliação de Produtos em anexo. 
 
 As estapas exploradas são:
-- Limpeza e pré-processamento dos dados textuais
+- Limpeza e pré-processamento dos dados textuais.
 - Criação de três abordagens de classificação:
   -   Classificador por contagem de palavras: Abordagem simples e interpretável, baseada na contagem de palavras positivas e negativas presentes nas avaliações. Para isso, utilizei dois dicionários previamente definidos: um com palavras de conotação positiva e outro com palavras negativas.
   -   Classificação com CountVectorizer: Transforma os textos em vetores com base na frequência de palavras. Modelo treinado com o algoritmo supervisionado Naive Bayes.
-  - Classificação com TF-IDF: Utiliza a ponderação de termos para melhorar a relevância dos vetores. Aplicação do mesmo classificador com dados vetorizados. Modelo treinado com o algoritmo supervisionado Logistic Regressor.
+  -   Classificação com TF-IDF: Utiliza a ponderação de termos para melhorar a relevância dos vetores. Aplicação do mesmo classificador com dados vetorizados. Modelo treinado com o algoritmo supervisionado Logistic Regressor.
 - Avaliação de desempenho dos modelos.
 - Resultado dos modelos (planilhas com as classificações das avaliações).
 - Comparação entre as abordagens.
-
-O projeto foi dividido em três abordagens de classificação:
-
-### 5.1 Classificador por contagem de palavras
-Abordagem simples e interpretável, baseada na contagem de palavras positivas e negativas presentes nas avaliações. Para isso, utilizei dois dicionários previamente definidos: um com palavras de conotação positiva e outro com palavras negativas.
-
-### 5.2 Classificação com CountVectorizer
-Transforma os textos em vetores com base na frequência de palavras. Modelo treinado com algoritmo supervisionado (ex: Naive Bayes).
-
-### 5.3 Classificação com TF-IDF
-Utiliza a ponderação de termos para melhorar a relevância dos vetores. Aplicação do mesmo classificador com dados vetorizados.
-
 
 ## **5.0 Resultados**
 
