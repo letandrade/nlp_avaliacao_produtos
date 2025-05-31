@@ -62,7 +62,8 @@ Nesta abordagem simples e interpretável, as avaliações foram classificadas co
 
 A elaboração dos conjuntos de palavras positivas e negativas depende de uma avaliação prévia das avaliações reais, sendo ideal contar com o apoio da área de operação ou especialistas do negócio para sugerirem termos representativos. Apesar de sua simplicidade e transparência, essa abordagem demanda uma constante manutenção e adaptação dos dicionários, o que pode limitar sua escalabilidade.
 
-✅ Pontos fortes: fácil de interpretar, sem necessidade de modelo supervisionado.\n
+✅ Pontos fortes: fácil de interpretar, sem necessidade de modelo supervisionado.
+
 ⚠️ Limitações: dependência da qualidade dos dicionários; baixa adaptabilidade a novos contextos.
 
 🔹 Abordagem 2 – Naive Bayes com CountVectorizer
