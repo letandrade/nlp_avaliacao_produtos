@@ -26,7 +26,7 @@ A solução contempla três abordagens distintas para a classificação:
 ## **3.0 Ferramentas utilizadas**
 
 - **Python (Anaconda):** Pré-processamento, modelagem e avaliação.
-- **Pandas / seaborn / matplotlib/ Scikit-learn / nltk/ re / wordcloud/:** Bibliotecas para manipulação e NLP.
+- **Pandas / seaborn / matplotlib/ Scikit-learn / nltk / re / wordcloud:** Bibliotecas para manipulação e NLP.
 - **Jupyter Notebook:** Ambiente de desenvolvimento.
   
 ## **4.0 Desenvolvimento**
