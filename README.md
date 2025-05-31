@@ -1,5 +1,4 @@
-<h1 align="center"> Análise de Sentimentos em
-  Avaliações de Produtos Amazon<br /> </h1>
+<h1 align="center"> Análise de Sentimentos em Avaliações de Produtos Amazon<br /> </h1>
 
 ## **1.0 Visão geral**
 
