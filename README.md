@@ -72,6 +72,7 @@ Nesta abordagem, as avaliações foram convertidas em vetores numéricos com bas
 A vetorização simplificada captura a presença de palavras-chave, mas não considera a importância relativa dos termos no corpus. Ainda assim, o modelo demonstrou bom desempenho em bases balanceadas, sendo uma solução eficiente para conjuntos de dados moderadamente complexos.
 
 ✅ Pontos fortes: rápida implementação, bom desempenho em bases simples.
+
 ⚠️ Limitações: sensível a palavras comuns, pode superestimar termos irrelevantes e depende de um dataset previamente rotulado.
 
 🔹 Abordagem 3 – Regressão Logística com TF-IDF
@@ -80,6 +81,7 @@ Nesta abordagem, os textos foram vetorizados com TF-IDF (Term Frequency – Inve
 Comparada às demais abordagens, esta apresentou melhor equilíbrio entre desempenho e generalização, com menor tendência ao overfitting. Ainda assim, para uma aplicação em produção, seria necessário um cuidado maior na validação cruzada, ajuste de hiperparâmetros e testes com dados reais não vistos.
 
 ✅ Pontos fortes: vetorização mais robusta, melhor generalização, modelo bem compreendido.
+
 ⚠️ Limitações: maior complexidade no ajuste e interpretação, sensível a ruídos e também requer um conjunto de dados rotulado para treinamento.
 
 Considerações Finais
