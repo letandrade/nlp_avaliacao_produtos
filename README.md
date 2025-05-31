@@ -55,3 +55,43 @@ As estapas implementadas são:
 
 ## **5.0 Resultados**
 
+O principal objetivo deste projeto foi implementar diferentes abordagens de classificação de sentimentos em avaliações de produtos da Amazon, explorando as características, vantagens e desafios de cada técnica.
+
+🔹 Abordagem 1 – Classificador por Contagem de Palavras
+Nesta abordagem simples e interpretável, as avaliações foram classificadas com base na contagem de palavras positivas e negativas contidas nos textos, utilizando dois dicionários customizados. Um dos principais desafios enfrentados foi a criação desses dicionários base, que exigem uma curadoria cuidadosa para serem eficazes.
+
+A elaboração dos conjuntos de palavras positivas e negativas depende de uma avaliação prévia das avaliações reais, sendo ideal contar com o apoio da área de operação ou especialistas do negócio para sugerirem termos representativos. Apesar de sua simplicidade e transparência, essa abordagem demanda uma constante manutenção e adaptação dos dicionários, o que pode limitar sua escalabilidade.
+
+✅ Pontos fortes: fácil de interpretar, sem necessidade de modelo supervisionado.
+⚠️ Limitações: dependência da qualidade dos dicionários; baixa adaptabilidade a novos contextos.
+
+🔹 Abordagem 2 – Naive Bayes com CountVectorizer
+Nesta abordagem, as avaliações foram convertidas em vetores numéricos com base na frequência absoluta das palavras (CountVectorizer) e classificadas por meio de um modelo supervisionado Naive Bayes.
+
+A vetorização simplificada captura a presença de palavras-chave, mas não considera a importância relativa dos termos no corpus. Ainda assim, o modelo demonstrou bom desempenho em bases balanceadas, sendo uma solução eficiente para conjuntos de dados moderadamente complexos.
+
+✅ Pontos fortes: rápida implementação, bom desempenho em bases simples.
+⚠️ Limitações: sensível a palavras comuns, pode superestimar termos irrelevantes e depende de um dataset previamente rotulado.
+
+🔹 Abordagem 3 – Regressão Logística com TF-IDF
+Nesta abordagem, os textos foram vetorizados com TF-IDF (Term Frequency – Inverse Document Frequency), que pondera a importância de cada palavra com base em sua frequência no documento e na base como um todo. O modelo de classificação utilizado foi uma Regressão Logística, amplamente aplicada em problemas de NLP pela sua capacidade de lidar com alta dimensionalidade e fornecer probabilidades associadas às previsões.
+
+Comparada às demais abordagens, esta apresentou melhor equilíbrio entre desempenho e generalização, com menor tendência ao overfitting. Ainda assim, para uma aplicação em produção, seria necessário um cuidado maior na validação cruzada, ajuste de hiperparâmetros e testes com dados reais não vistos.
+
+✅ Pontos fortes: vetorização mais robusta, melhor generalização, modelo bem compreendido.
+⚠️ Limitações: maior complexidade no ajuste e interpretação, sensível a ruídos e também requer um conjunto de dados rotulado para treinamento.
+
+Considerações Finais
+A comparação entre os métodos evidenciou que abordagens mais sofisticadas, como TF-IDF combinada com modelos supervisionados, tendem a oferecer maior precisão e capacidade de generalização. No entanto, a contagem de palavras, ainda têm valor quando simplicidade, interpretabilidade e baixo custo computacional são prioritários.
+
+Para aplicações reais, recomenda-se:
+
+- Refinamento dos dicionários de sentimentos com apoio do time de negócio.
+- Inclusão de validação cruzada e tuning de hiperparâmetros.
+- Avaliação de modelos mais avançados, como Word2Vec, FastText ou BERT.
+
+
+
+
+
+
