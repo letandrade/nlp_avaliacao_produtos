@@ -14,7 +14,7 @@ O projeto tem impacto direto em áreas como comércio eletrônico, suporte ao cl
 
 ## **2.0 Objetivos técnicos**
 
-Além da construção dos classificadores, este projeto contempla a entrega de planilhas em formato Excel contendo os resultados da análise de sentimentos. Para cada uma das três abordagens de classificação — contagem de palavras, vetorização com CountVectorizer e TF-IDF — serão geradas duas planilhas:
+Além da construção dos classificadores, o objetivo técnico deste projeto é a entrega de planilhas em formato Excel contendo os resultados da análise de sentimentos. Para cada uma das três abordagens de classificação — contagem de palavras, vetorização com CountVectorizer e TF-IDF — serão geradas duas planilhas com:
 
 Distribuição absoluta: quantidade de avaliações positivas e negativas, segmentadas por tipo de produto e marca.
 
@@ -22,9 +22,9 @@ Distribuição percentual: representação em percentual dessas classificações
 
 Ao todo, serão entregues 6 planilhas contendo uma visão consolidada dos resultados obtidos em cada abordagem, permitindo comparações detalhadas e facilitando a interpretação dos padrões de sentimento por produto e marca.
 
-A solução contempla três abordagens distintas para a classificação:
+As três abordagens distintas para a classificação são:
 
-- Classificador por quantidade de palavras — Utiliza uma regra simples com base no número de palavras positivas e negativas encontradas no texto.
+- Classificador por quantidade de palavras — utiliza uma regra simples com base no número de palavras positivas e negativas encontradas no texto.
 
 - CountVectorizer — técnica de vetorização que transforma o texto em uma matriz de frequências de palavras, permitindo o uso de modelos de machine learning.
 
@@ -41,8 +41,10 @@ A solução contempla três abordagens distintas para a classificação:
 
 O desenvolvimento detalhado está disponível no notebook Avaliação de Produtos em anexo. 
 
-As estapas exploradas são:
-- Limpeza e pré-processamento dos dados textuais.
+As estapas implementadas são:
+
+- Criação de um prompt no chatgpt para gerar classificações das avaliações. Sendo, 0: negativo e 1:positivo. Resultando na base de dados: avaliacoes_classificadas.csv.
+- Importação, limpeza e pré-processamento dos dados textuais.
 - Criação de três abordagens de classificação:
   -   Classificador por contagem de palavras: Abordagem simples e interpretável, baseada na contagem de palavras positivas e negativas presentes nas avaliações. Para isso, utilizei dois dicionários previamente definidos: um com palavras de conotação positiva e outro com palavras negativas.
   -   Classificação com CountVectorizer: Transforma os textos em vetores com base na frequência de palavras. Modelo treinado com o algoritmo supervisionado Naive Bayes.
