@@ -46,9 +46,9 @@ As estapas implementadas são:
 - Criação de um prompt no chatgpt para gerar classificações das avaliações. Sendo, 0: negativo e 1:positivo. Resultando na base de dados: avaliacoes_classificadas.csv.
 - Importação, limpeza e pré-processamento dos dados textuais.
 - Criação de três abordagens de classificação:
-  -   Classificador por contagem de palavras: Abordagem simples e interpretável, baseada na contagem de palavras positivas e negativas presentes nas avaliações. Para isso, utilizei dois dicionários previamente definidos: um com palavras de conotação positiva e outro com palavras negativas.
-  -   Classificação com CountVectorizer: Transforma os textos em vetores com base na frequência de palavras. Modelo treinado com o algoritmo supervisionado Naive Bayes.
-  -   Classificação com TF-IDF: Utiliza a ponderação de termos para melhorar a relevância dos vetores. Aplicação do mesmo classificador com dados vetorizados. Modelo treinado com o algoritmo supervisionado Logistic Regressor.
+  -   **Classificador por contagem de palavras:** Abordagem simples e interpretável, baseada na contagem de palavras positivas e negativas presentes nas avaliações. Para isso, utilizei dois dicionários previamente definidos: um com palavras de conotação positiva e outro com palavras negativas.
+  -   **Classificação com CountVectorizer:** Transforma os textos em vetores com base na frequência de palavras. Modelo treinado com o algoritmo supervisionado Naive Bayes.
+  -   **Classificação com TF-IDF:** Utiliza a ponderação de termos para melhorar a relevância dos vetores. Aplicação do mesmo classificador com dados vetorizados. Modelo treinado com o algoritmo supervisionado Logistic Regressor.
 - Avaliação de desempenho dos modelos.
 - Resultado dos modelos (planilhas com as classificações das avaliações).
 - Comparação entre as abordagens.
