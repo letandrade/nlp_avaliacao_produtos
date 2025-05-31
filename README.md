@@ -14,14 +14,15 @@ O projeto tem impacto direto em áreas como comércio eletrônico, suporte ao cl
 
 ## **2.0 Objetivos técnicos**
 
+Entregar planilhas em excel com as quantidade e representação percentual das avaliações positivas e negativas por tipo de produto e marca. Essa entrega será feita para as 3 abordagens de classificação, totalizando 6 planilhas de resulatdos. 
+
 A solução contempla três abordagens distintas para a classificação:
 
-- Classificador por quantidade de palavras — abordagem simples e interpretável baseada em regras heurísticas.
+- Classificador por quantidade de palavras — Utiliza uma regra simples com base no número de palavras positivas e negativas encontradas no texto.
 
 - CountVectorizer — técnica de vetorização que transforma o texto em uma matriz de frequências de palavras, permitindo o uso de modelos de machine learning.
 
 - TF-IDF (Term Frequency-Inverse Document Frequency) — abordagem que pondera a importância das palavras considerando a frequência no corpus, resultando em vetores mais informativos para classificação.
-
 
 ## **3.0 Ferramentas utilizadas**
 
@@ -30,6 +31,30 @@ A solução contempla três abordagens distintas para a classificação:
 - **Jupyter Notebook:** Ambiente de desenvolvimento.
   
 ## **4.0 Desenvolvimento**
+
+O desenvolvimento detalhado está disponível no notebook Avaliação de Produtos em anexo. 
+
+As estapas exploradas são:
+- Limpeza e pré-processamento dos dados textuais
+- Criação de três abordagens de classificação:
+  -   Classificador por contagem de palavras: Abordagem simples e interpretável, baseada na contagem de palavras positivas e negativas presentes nas avaliações. Para isso, utilizei dois dicionários previamente definidos: um com palavras de conotação positiva e outro com palavras negativas.
+  -   Classificação com CountVectorizer: Transforma os textos em vetores com base na frequência de palavras. Modelo treinado com o algoritmo supervisionado Naive Bayes.
+  - Classificação com TF-IDF: Utiliza a ponderação de termos para melhorar a relevância dos vetores. Aplicação do mesmo classificador com dados vetorizados. Modelo treinado com o algoritmo supervisionado Logistic Regressor.
+- Avaliação de desempenho dos modelos.
+- Resultado dos modelos (planilhas com as classificações das avaliações).
+- Comparação entre as abordagens.
+
+O projeto foi dividido em três abordagens de classificação:
+
+### 5.1 Classificador por contagem de palavras
+Abordagem simples e interpretável, baseada na contagem de palavras positivas e negativas presentes nas avaliações. Para isso, utilizei dois dicionários previamente definidos: um com palavras de conotação positiva e outro com palavras negativas.
+
+### 5.2 Classificação com CountVectorizer
+Transforma os textos em vetores com base na frequência de palavras. Modelo treinado com algoritmo supervisionado (ex: Naive Bayes).
+
+### 5.3 Classificação com TF-IDF
+Utiliza a ponderação de termos para melhorar a relevância dos vetores. Aplicação do mesmo classificador com dados vetorizados.
+
 
 ## **5.0 Resultados**
 
